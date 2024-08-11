@@ -18,7 +18,7 @@
   --spacing-regular: 1em;
   --spacing-medium: 2em;
   --spacing-large: 3em;
-  --spacing-xlarge: 6em;
+  --spacing-xlarge: 4em;
 
   --fs-base: 1.125rem;
   --fs-300: 0.8125rem;
@@ -88,13 +88,37 @@ h6 {
   text-wrap: balance;
 }
 
-/* ========|| General Styling ||========= */
+/* ========|| General Style ||========= */
 body {
   font-family: var(--ff-base);
   font-size: var(--fs-base);
 }
-/* ==========|| Main Styling ||========== */
 
+.wrapper {
+  padding: var(--spacing-medium) var(--spacing-regular);
+}
+/* ==========|| Header Style ||========== */
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-xlarge);
+}
+.header__logo {
+  max-width: 5em;
+}
+.button {
+  font-size: var(--fs-300);
+  font-weight: var(--fw-bold);
+  border: none;
+  border-radius: 100vh;
+}
+
+.hero__content {
+  display: grid;
+  gap: var(--spacing-medium);
+}
+/* ===========|| Main Style ||=========== */
+/* ==========|| footer Style ||========== */
 /* ============|| Utilities ||=========== */
 
 /* ===========|| Breakpoints ||========== */
