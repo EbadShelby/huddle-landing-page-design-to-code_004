@@ -2,7 +2,7 @@
 :root {
   --clr-primary: hsl(322, 100%, 66%);
 
-  --clr-neutral-100: hsl(0, 0%, 96%);
+  --clr-neutral-100: hsl(0, 0%, 100%);
   --clr-neutral-200: hsl(193, 100%, 96%);
   --clr-neutral-500: hsl(208, 11%, 55%);
   --clr-neutral-800: hsl(192, 100%, 9%);
@@ -29,6 +29,8 @@
   --fs-500: 0.9375rem;
   --fs-600: 1rem;
   --fs-700: 1.25rem;
+  --fs-800: 2rem;
+  --fs-900: 3rem;
 }
 
 /* ===============|| Reset ||============= */
@@ -114,6 +116,7 @@ body {
 }
 .hero {
   display: grid;
+  align-items: center;
   gap: var(--spacing-large);
   padding-bottom: var(--spacing-medium);
   padding-inline: var(--spacing-regular);
@@ -157,7 +160,7 @@ body {
 }
 .button--cta-primary {
   background-color: var(--clr-primary);
-  padding: 0.75em 4em;
+  padding: 1em 4em;
   margin-inline: auto;
   color: var(--clr-neutral-100);
 }
@@ -230,6 +233,11 @@ body {
   justify-content: center;
   margin-bottom: var(--spacing-regular);
 }
+.footer__social-media img {
+  max-width: 1.5em;
+  filter: brightness(0) invert(100%);
+
+}
 .footer__copyright {
   font-size: var(--fs-200);
   text-align: center;
@@ -247,8 +255,15 @@ body {
   .hero {
     grid-template-columns: 1fr 1fr;
   }
+  /* .hero__title {
+    font-size: var(--fs-900);
+  } */
   .button {
-    font-size: var(--fs-600);
+    font-size: var(--fs-400);
+    align-self: center;
+  }
+  .button--cta-secondary {
+    padding: 1em 4em;
   }
   .header__logo {
     max-width: 10em;
@@ -258,19 +273,37 @@ body {
   }
   .feature {
     grid-template-columns: 1fr 1fr;
+    align-items: center;
   }
-  .feature:nth-child(2) .feature__image-container {
+  .feature:not(:nth-child(2)) .feature__image-container {
     grid-row: 2 / 1;
     grid-column: 2 / 3;
-    /* grid-area:  1 / 2 / 1 / 2; */
   }
-  .feature:nth-child(2) .feature__content {
-    /* grid-area: 1 / 1 / 2  / 2; */
+  /* .feature__title {
+    font-size: var(--fs-800);
+  } */
+  .footer__page-logo {
+    max-width: 15em;
+  }
+  .footer__grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .footer__nav ul{
+    place-content: center;
+  }
+  .footer__social-media img {
+    max-width: 2em;
   }
 }
 @media (min-width: 900px ) {
   .inline-wrapper {
     padding-inline: var(--spacing-xlarge);
+  }
+  .hero__title {
+    font-size: var(--fs-900);
+  }
+  .feature__title {
+    font-size: var(--fs-800);
   }
 } 
 
